@@ -11,6 +11,10 @@
 		6DBA31922718D7D700671C0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA31912718D7D700671C0C /* ContentView.swift */; };
 		6DBA31942718D7DA00671C0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DBA31932718D7DA00671C0C /* Assets.xcassets */; };
 		6DBA31972718D7DA00671C0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DBA31962718D7DA00671C0C /* Preview Assets.xcassets */; };
+		6DBA319F2719D86600671C0C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA319E2719D86600671C0C /* NetworkManager.swift */; };
+		6DBA31A12719D9A200671C0C /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA31A02719D9A200671C0C /* PostData.swift */; };
+		6DBA31A42719E17B00671C0C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA31A32719E17B00671C0C /* DetailView.swift */; };
+		6DBA31A62719E9A900671C0C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA31A52719E9A900671C0C /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		6DBA31912718D7D700671C0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6DBA31932718D7DA00671C0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DBA31962718D7DA00671C0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6DBA319E2719D86600671C0C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6DBA31A02719D9A200671C0C /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		6DBA31A32719E17B00671C0C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		6DBA31A52719E9A900671C0C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		6DBA31A72719EDF800671C0C /* H4XOR News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4XOR News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,10 @@
 		6DBA318E2718D7D700671C0C /* H4XOR News */ = {
 			isa = PBXGroup;
 			children = (
+				6DBA31A72719EDF800671C0C /* H4XOR News.entitlements */,
 				6DBA318F2718D7D700671C0C /* H4XOR_NewsApp.swift */,
-				6DBA31912718D7D700671C0C /* ContentView.swift */,
+				6DBA31A22719E14F00671C0C /* Views */,
+				6DBA319D2719D84C00671C0C /* Models */,
 				6DBA31932718D7DA00671C0C /* Assets.xcassets */,
 				6DBA31952718D7DA00671C0C /* Preview Content */,
 			);
@@ -65,6 +76,25 @@
 				6DBA31962718D7DA00671C0C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6DBA319D2719D84C00671C0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA319E2719D86600671C0C /* NetworkManager.swift */,
+				6DBA31A02719D9A200671C0C /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6DBA31A22719E14F00671C0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA31912718D7D700671C0C /* ContentView.swift */,
+				6DBA31A32719E17B00671C0C /* DetailView.swift */,
+				6DBA31A52719E9A900671C0C /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBA319F2719D86600671C0C /* NetworkManager.swift in Sources */,
+				6DBA31A12719D9A200671C0C /* PostData.swift in Sources */,
 				6DBA31922718D7D700671C0C /* ContentView.swift in Sources */,
+				6DBA31A62719E9A900671C0C /* WebView.swift in Sources */,
+				6DBA31A42719E17B00671C0C /* DetailView.swift in Sources */,
 				6DBA31902718D7D700671C0C /* H4XOR_NewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,9 +300,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4XOR News/H4XOR News.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4XOR News/Preview Content\"";
+				DEVELOPMENT_TEAM = K7T6R7C4K7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -284,9 +321,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cosmosvigorous.H4XOR-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -295,9 +334,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4XOR News/H4XOR News.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4XOR News/Preview Content\"";
+				DEVELOPMENT_TEAM = K7T6R7C4K7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -313,9 +355,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cosmosvigorous.H4XOR-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
